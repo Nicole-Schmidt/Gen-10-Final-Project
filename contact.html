@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<style>
+		.header {
+			text-align: center;
+			font-size: 50px;
+		}
+		.nav {
+			border-style: solid;
+			border-color: black;
+			border-width: 1px;
+			width: 100%;
+			padding: 10px;
+		}
+		.footer {
+			position: fixed;
+			bottom: 0px;
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">Niki's Cafe</header>
+	<nav class="nav">
+		<a href="index.html" style="padding: 10px;">Home</a>
+		<a href="menu.html" style="padding: 10px;">Menu</a>
+		<a href="contact.html" style="padding: 10px;">Contact Us</a>
+	</nav>
+		<div style="width: 50%; padding: 25px; text-align: left; margin: 0 auto;">
+		<form action="contact.html" method="POST">
+			<p>Name: <input type="text" name="contactName"/></p>
+			<p>Email: <input type="text" name="contactEmail"/></p>
+			<p>Phone: <input type="text" name="contactPhone"/></p>
+			<p>Reason for Inquiry: 
+				<select name="InquiryReason">
+					<option value="Catering">Catering</option>
+					<option value="PrivateParty">Private Party</option>
+					<option value="Feedback">Feedback</option>
+					<option value="Other">Other</option>
+				</select>
+			</p>
+			<p>Additional Information: <textarea name="RestaurantFeedback" rows="6" cols="25"></textarea></p>
+			<p>Have you been to the restaurant?
+				<input type="radio" name="answer" value="No" checked>No
+				<input type="radio" name="answer" value="Yes">Yes</p>
+			<p>Best days to contact you:
+				<input type="checkbox" name="DayChoices" value="Monday"/>M
+				<input type="checkbox" name="DayChoices" value="Tuesday"/>T
+				<input type="checkbox" name="DayChoices" value="Wednesday"/>W
+				<input type="checkbox" name="DayChoices" value="Thursday"/>Th
+				<input type="checkbox" name="DayChoices" value="Friday"/>F
+			</p>
+			<p style="text-align: center;">
+				<input type="submit" name="SubmitButton" required/>
+			</p>
+		</form>
+		</div>
+	<footer class="footer">
+		<hr>
+		<p>123 Apple Drive, Minneapolis, MN 55414</p>
+		<p>555-555-5555</p>
+	</footer>
+</body>
+</html>
