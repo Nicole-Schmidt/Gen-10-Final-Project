@@ -2,40 +2,30 @@
 <html>
 <head>
 	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="restaurantStyles.css"/>
 	<style>
-		.header {
+		#SubmitButton {
 			text-align: center;
-			font-size: 50px;
 		}
-		.nav {
-			border-style: solid;
-			border-color: black;
-			border-width: 1px;
-			width: 100%;
-			padding: 10px;
-		}
-		.footer {
-			position: fixed;
-			bottom: 0px;
-			width: 100%;
-			text-align: center;
+		#Required {
+			font-weight: 700;
 		}
 	</style>
 </head>
 <body>
-	<header class="header">Niki's Cafe</header>
-	<nav class="nav">
-		<a href="index.html" style="padding: 10px;">Home</a>
-		<a href="menu.html" style="padding: 10px;">Menu</a>
-		<a href="contact.html" style="padding: 10px;">Contact Us</a>
+	<header id="header">Niki's Cafe</header>
+	<nav id="nav">
+		<a href="index.html">Home</a>
+		<a href="menu.html">Menu</a>
+		<a href="contact.html">Contact Us</a>
 	</nav>
 		<div style="width: 50%; padding: 25px; text-align: left; margin: 0 auto;">
 		<form action="contact.html" method="POST">
-			<p>Name: <input type="text" name="contactName"/></p>
-			<p>Email: <input type="text" name="contactEmail"/></p>
-			<p>Phone: <input type="text" name="contactPhone"/></p>
-			<p>Reason for Inquiry: 
-				<select name="InquiryReason">
+			<p id="Required">Name: <input type="text" name="contactName" required/></p>
+			<p id="Required">Email: <input type="text" name="contactEmail" required="" /></p>
+			<p id="Required">Phone: <input type="text" name="contactPhone" required="" /></p>
+			<p id="Required">Reason for Inquiry: 
+				<select name="InquiryReason" required>
 					<option value="Catering">Catering</option>
 					<option value="PrivateParty">Private Party</option>
 					<option value="Feedback">Feedback</option>
@@ -53,12 +43,12 @@
 				<input type="checkbox" name="DayChoices" value="Thursday"/>Th
 				<input type="checkbox" name="DayChoices" value="Friday"/>F
 			</p>
-			<p style="text-align: center;">
+			<p id="SubmitButton">
 				<input type="submit" name="SubmitButton" required/>
 			</p>
 		</form>
 		</div>
-	<footer class="footer">
+	<footer id="footer">
 		<hr>
 		<p>123 Apple Drive, Minneapolis, MN 55414</p>
 		<p>555-555-5555</p>
