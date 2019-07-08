@@ -1,28 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Home Page</title>
+	<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="restaurantStyles.css"/>
 	<style>
-		#PicAndDescrip {
+		.row {
 			background-color: lightblue;
-			width: 400px;
+			width: 600px;
 			padding: 25px;
 			text-align: left;
 			margin: 0 auto;
 		}
+		.page-header {
+			background-color: lightgray;
+		}
+		#carouselExampleFade {
+			height: 300px;
+			width: 500px;
+		}
+		.carousel-caption {
+			color: lightblue;
+		}
 	</style>
 </head>
 <body>
+	<div class="container-fluid">
+		<div class="page-header" align="center">
+		<h1>We are opening a new location in Edina next month!</h1>
+	</div>
 	<header id="header">Niki's Cafe</header>
 	<nav id="nav">
-		<a href="index.html">Home</a>
-		<a href="menu.html">Menu</a>
-		<a href="contact.html">Contact Us</a>
+		<ul class="nav nav-pills">
+		<li class="nav-item">
+			<a class="nav-link active" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="menu.html">Menu</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="contact.html">Contact Us</a>
+		</li>
+		</ul>
 	</nav>
-		<div id="PicAndDescrip">
-			<img src="images/foodpic.jpg" width="400px" height="150px" alt="Picture of Food">
-		<p align="left">Restaurant Description</p>
+		<div class="container-fliud" id="PicAndDescrip">
+			<div class="row">
+				<div class="col-md-6">
+				<img src="images/foodpic.jpg" width="400px" height="150px" alt="Picture of Food">
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-md-12">
+		<p>Restaurant Description</p>
 		<p>
 			Niki's Cafe serves up all your favorite food with that special twist. The restaurant was opened in 2014 by Niki Schmidt after she decided that the world needed to try her food. Many of her friends and family would ask her to make items on this menu for every family gathering whether it was a graduation party, Thanksgiving or a family reunion. Come in, eat and join the Niki's Cafe family!
 		</p>
@@ -30,12 +62,52 @@
 			Niki has won multiple awards for her food. Most recently the "Best Homemade BBQ" at the 2018 Twin Cities Condiment Connoisseur Convention.
 		</p>
 		</div>
+		</div>
+		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  			<div class="carousel-inner">
+   			<div class="carousel-item active">
+      			<img class="d-block w-100" src="images/restaurant-842342_960_720.jpg" alt="First slide">
+      			<div class="carousel-caption">
+        		<h3>New Location in Edina!</h3>
+        		<p>We will be opening another Niki's Cafe over Labor Day Weekend!</p>
+      </div>
+    		</div>
+   			<div class="carousel-item">
+      			<img class="d-block w-100" src="images/download.jpg" alt="Second slide">
+      			<div class="carousel-caption">
+       			<h3>Seasonal Menu Items</h3>
+       			<p>Come in and try our new Summer menu items!</p>
+      </div>
+    		</div>
+    		<div class="carousel-item">
+      		<img class="d-block w-100" src="images/images.jpg" alt="Third slide">
+      		<div class="carousel-caption">
+        	<h3>Drink of the Month</h3>
+        	<p>Our July Drink of the Month is the SG Special Brew.</p>
+      </div>
+    		</div>
+  			</div>
+  			<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    		<span class="sr-only">Previous</span>
+  			</a>
+  			<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+   			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    		<span class="sr-only">Next</span>
+  			</a>
+		</div>
 		<br />
 		<br />
 	<footer id="footer">
 		<hr>
 		<p>123 Apple Drive, Minneapolis, MN 55414</p>
 		<p>555-555-5555</p>
+		<p>This site is best viewed with JavaScript enabled</p>
 	</footer>
+	</div>
+	<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
