@@ -13,7 +13,7 @@
 	<h1>Lucky Sevens</h1>
 	<form name="luckysevens" for="startingBet" onsubmit=" return playGame()">
 			<label for="startingBet">Starting Bet:</label>
-			<input type="text" id="stBet" placeholder="$0.00">
+			$<input type="text" id="stBet" placeholder="0">
 	<br />
 	<br />
 	<button type="submit" id="playButton" onclick="playGame()" class="btn btn-primary">Play</button>
@@ -26,7 +26,7 @@
 			<tbody>
 				<tr>
 					<td>Starting Bet</td>
-					<td><span id="firstBet"></span></td>
+					<td>$<span id="firstBet"></span></td>
 				</tr>
 				<tr>
 					<td>Total Rolls Before Going Broke</td>
@@ -34,7 +34,7 @@
 				</tr>
 				<tr>
 					<td>Highest Amount Won</td>
-					<td><span id="highestWon"></span></td>
+					<td>$<span id="highestWon"></span></td>
 				<tr>
 					<td>Roll Counts at Highest Amount Won</td>
 					<td><span id="highestRolls"></span></td>
@@ -42,13 +42,7 @@
 			</tbody>
 		</table>
 	</div>
-		<script>
-			function playGame() {
-				if(stBet <=0) {
-		alert("Starting bet must be greater than 0.");
-		return false;
-			}}</script>
-		<script src="luckysevens.js"></script>
+		<script src="sevenscript.js"></script>
 	<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
